@@ -16,13 +16,13 @@ import android.widget.ImageView;
 import com.dqgb.lib_audio.AudioBean;
 import com.dqgb.lib_audio.AudioHelper;
 
-import net.lucode.hackware.magicindicator.MagicIndicator;
-import net.lucode.hackware.magicindicator.ViewPagerHelper;
-import net.lucode.hackware.magicindicator.buildins.commonnavigator.CommonNavigator;
-import net.lucode.hackware.magicindicator.buildins.commonnavigator.abs.CommonNavigatorAdapter;
-import net.lucode.hackware.magicindicator.buildins.commonnavigator.abs.IPagerIndicator;
-import net.lucode.hackware.magicindicator.buildins.commonnavigator.abs.IPagerTitleView;
-import net.lucode.hackware.magicindicator.buildins.commonnavigator.titles.SimplePagerTitleView;
+//import net.lucode.hackware.magicindicator.MagicIndicator;
+//import net.lucode.hackware.magicindicator.ViewPagerHelper;
+//import net.lucode.hackware.magicindicator.buildins.commonnavigator.CommonNavigator;
+//import net.lucode.hackware.magicindicator.buildins.commonnavigator.abs.CommonNavigatorAdapter;
+//import net.lucode.hackware.magicindicator.buildins.commonnavigator.abs.IPagerIndicator;
+//import net.lucode.hackware.magicindicator.buildins.commonnavigator.abs.IPagerTitleView;
+//import net.lucode.hackware.magicindicator.buildins.commonnavigator.titles.SimplePagerTitleView;
 
 import java.util.ArrayList;
 
@@ -106,45 +106,45 @@ public class MainActivity extends FragmentActivity implements View.OnClickListen
         findViewById(R.id.exit_layout).setOnClickListener(this);
     }
     private void initMagicIndicator() {
-        MagicIndicator magicIndicator = findViewById(R.id.magic_indicator);
-        magicIndicator.setBackgroundColor(Color.WHITE);
-        CommonNavigator commonNavigator = new CommonNavigator(this);
-        commonNavigator.setAdjustMode(true);
-        commonNavigator.setAdapter(new CommonNavigatorAdapter() {
-            @Override
-            public int getCount() {
-                return CHANNELS == null ? 0 : CHANNELS.length;
-            }
-
-            @Override
-            public IPagerTitleView getTitleView(Context context, final int index) {
-                SimplePagerTitleView simplePagerTitleView = new ScaleTransitionPagerTitleView(context);
-                simplePagerTitleView.setText(CHANNELS[index].getKey());
-                simplePagerTitleView.setTextSize(19);
-                simplePagerTitleView.setTypeface(Typeface.defaultFromStyle(Typeface.BOLD));
-                simplePagerTitleView.setNormalColor(Color.parseColor("#999999"));
-                simplePagerTitleView.setSelectedColor(Color.parseColor("#333333"));
-                simplePagerTitleView.setOnClickListener(new View.OnClickListener() {
-                    @Override
-                    public void onClick(View v) {
-                        mViewPager.setCurrentItem(index);
-                    }
-                });
-                return simplePagerTitleView;
-            }
-
-            @Override
-            public IPagerIndicator getIndicator(Context context) {
-                return null;
-            }
-
-            @Override
-            public float getTitleWeight(Context context, int index) {
-                return 1.0f;
-            }
-        });
-        magicIndicator.setNavigator(commonNavigator);
-        ViewPagerHelper.bind(magicIndicator, mViewPager);
+//        MagicIndicator magicIndicator = findViewById(R.id.magic_indicator);
+//        magicIndicator.setBackgroundColor(Color.WHITE);
+//        CommonNavigator commonNavigator = new CommonNavigator(this);
+//        commonNavigator.setAdjustMode(true);
+//        commonNavigator.setAdapter(new CommonNavigatorAdapter() {
+//            @Override
+//            public int getCount() {
+//                return CHANNELS == null ? 0 : CHANNELS.length;
+//            }
+//
+//            @Override
+//            public IPagerTitleView getTitleView(Context context, final int index) {
+//                SimplePagerTitleView simplePagerTitleView = new ScaleTransitionPagerTitleView(context);
+//                simplePagerTitleView.setText(CHANNELS[index].getKey());
+//                simplePagerTitleView.setTextSize(19);
+//                simplePagerTitleView.setTypeface(Typeface.defaultFromStyle(Typeface.BOLD));
+//                simplePagerTitleView.setNormalColor(Color.parseColor("#999999"));
+//                simplePagerTitleView.setSelectedColor(Color.parseColor("#333333"));
+//                simplePagerTitleView.setOnClickListener(new View.OnClickListener() {
+//                    @Override
+//                    public void onClick(View v) {
+//                        mViewPager.setCurrentItem(index);
+//                    }
+//                });
+//                return simplePagerTitleView;
+//            }
+//
+//            @Override
+//            public IPagerIndicator getIndicator(Context context) {
+//                return null;
+//            }
+//
+//            @Override
+//            public float getTitleWeight(Context context, int index) {
+//                return 1.0f;
+//            }
+//        });
+//        magicIndicator.setNavigator(commonNavigator);
+//        ViewPagerHelper.bind(magicIndicator, mViewPager);
     }
 
     @Override
